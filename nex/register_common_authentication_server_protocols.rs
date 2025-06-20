@@ -7,7 +7,7 @@ fn register_common_authentication_server_protocols() -> Result<(), ParseIntError
     let common_ticket_granting_protocol = commonticketgranting::new_common_protocol(ticket_granting_protocol);
     common_ticket_granting_protocol.set_pretendo_validation(globals::aes_key);
 
-    let port: u16 = env::var("PN_ACNL_SECURE_SERVER_PORT")?.parse()?;
+    let port: u16 = env::var("JN_ACNL_SECURE_SERVER_PORT")?.parse()?;
 
     let mut secure_station_url = types::StationURL::new("");
     secure_station_url.set_url_type(constants::STATION_URL_PRUDPS);
