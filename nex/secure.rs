@@ -12,7 +12,7 @@ pub fn start_secure_server() {
     let secure_endpoint = globals::secure_endpoint.as_mut().unwrap();
     secure_endpoint.is_secure_end_point = true;
     secure_endpoint.server_account = globals::secure_server_account.clone();
-    secure_endpoint.account_details_by_pid = globals::account_details_by_pid.clone();
+    secure_endpoint.account_details_by_jid = globals::account_details_by_pid.clone();
     secure_endpoint.account_details_by_username = globals::account_details_by_username.clone();
     
     secure_server.bind_prudp_end_point(secure_endpoint.clone());
